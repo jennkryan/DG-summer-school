@@ -12,9 +12,9 @@ initialcond
 outp
 
 % post-process approximation
-%postp
+postp
 
 % plot post-processed result
-%postout
+postout
 
 

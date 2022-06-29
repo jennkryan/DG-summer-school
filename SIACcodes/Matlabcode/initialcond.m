@@ -1,20 +1,15 @@
-%func = @(x) ones(size(x));
-%func = @(x) 1-abs(x));
-%func = @(x) 1-x.^2;
+%func = @one;
+%func = @linear;
+%func = @quadratic;
+%func = @cubic;
 func = @(x) sin(4*pi*x);
 
-
-fmapquad = func(zmapquad);
-fmapEval = func(zmapEval);
-
-%calculate modes
 for nel = 1:N
+  h = x( nel + 1 ) - x( nel );
+  zmap = 0.5*h*(z+1.0) + x(nel);  %affine mapping of [-1,1] quadrature points on to element
+  f = func(zmap);           %function to be mapped evaluated at mapped quadrature points
   for i = 0:M
-      quadsum = 0;
-      for ni = 1:M+1
-          quadsum = quadsum + w(ni)*fmapquad(ni,nel).*Lvalue(i+1,ni);
-      end
-    uhat(nel,i+1) =  quadsum;
+    uhat(nel,i+1) =  dot(w,f'.*Lvalue(i+1,:))/LvalueMass(i+1);
   end
 end
 
