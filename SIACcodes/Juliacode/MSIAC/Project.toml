@@ -1,0 +1,21 @@
+name = "MSIAC"
+uuid = "89000846-9b51-4315-9022-878a679b62f2"
+authors = ["XuliaDS <juliadocampo@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+BSplines = "488c2830-172b-11e9-1591-253b8a7df96d"
+CircularArrays = "7a955b69-7140-5f4e-a0ed-f168c5e2e749"
+Delaunay = "07eb4e4e-0c6d-46ef-bc4e-83d5e5d860a9"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Einsum = "b7d42ee7-0b51-5a75-98ca-779d3107e4c0"
+FastGaussQuadrature = "442a2c76-b920-505d-bb47-c5924d526838"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Polynomials = "f27b6e38-b328-58d1-80ce-0feddd5e7a45"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+SpecialPolynomials = "a25cea48-d430-424a-8ee7-0d3ad3742e9e"
+VTKDataIO = "c6703add-1d23-52c6-9943-3ad88652b9b2"
+WriteVTK = "64499a7a-5c06-52f2-abe2-ccb03c286192"
